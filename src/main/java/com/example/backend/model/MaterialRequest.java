@@ -19,6 +19,10 @@ public class MaterialRequest {
     private Long material_request_id;
     private Long senderId;
     private Long receiverId;
+    private String senderType;
+
+    private String senderName;
+    private String receiverName;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)

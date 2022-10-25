@@ -17,14 +17,19 @@ public class SupplierItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long supplier_item_id;
-    private Integer price = 0;
+    private String ItemName;
+    private String Category;
+    private String UOM;
+    //    private Integer price = 0;
+    private Integer price;
+    private String description;
     private Integer availableQuantity = 0;
     private Integer discountQuantity = 0;
     private Integer discountAsPercentage = 0;
-//    @Column(columnDefinition = "boolean default true")
+    //    @Column(columnDefinition = "boolean default true")
     private Boolean isActivate = true;
-//    @Column(columnDefinition = "boolean default false")
-    private Boolean isApprove = false;
+    //    @Column(columnDefinition = "boolean default false")
+    private Integer isApprove = 0;
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
     private Date createDate;
@@ -34,6 +39,9 @@ public class SupplierItem {
         createDate = new Date();
     }
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    InventoryItem inventoryItem;
+    private Long inventor_item_id;
+
+
+//    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//    InventoryItem inventoryItem;
 }
