@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/dispatch")
-@CrossOrigin
+@CrossOrigin(allowedHeaders = {"Authorization", "Origin"})
 @RequiredArgsConstructor
 public class DisptachController {
     private final DispatchService dispatchService;

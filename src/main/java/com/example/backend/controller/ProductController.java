@@ -15,7 +15,7 @@ import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin
+@CrossOrigin(allowedHeaders = {"Authorization", "Origin"})
 @RequiredArgsConstructor
 public class ProductController {
     private final ProductsService productsService;

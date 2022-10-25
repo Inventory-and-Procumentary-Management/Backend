@@ -14,7 +14,7 @@ import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/api/materialRequest")
-@CrossOrigin
+@CrossOrigin(allowedHeaders = {"Authorization", "Origin"})
 @RequiredArgsConstructor
 public class MaterialRequestController {
     private final MaterialRequestService materialRequestService;

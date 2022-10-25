@@ -14,7 +14,7 @@ import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/api/siteInventory")
-@CrossOrigin
+@CrossOrigin(allowedHeaders = {"Authorization", "Origin"})
 @RequiredArgsConstructor
 public class SiteInventoryController {
     private final SiteInventoryService siteInventoryService;
